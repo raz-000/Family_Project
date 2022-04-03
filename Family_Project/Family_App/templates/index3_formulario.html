@@ -24,7 +24,7 @@
 						<div class="inner">
 
 							<!-- Logo -->
-								<a href="index.html" class="logo">
+								<a href="/family/index.html" class="logo">
 									<span class="symbol"><img src="{% static 'images/logo.svg' %}" alt="" /></span><span class="title">PYTHON CODER HOUSE</span>
 								</a>
 
@@ -42,8 +42,8 @@
 					<nav id="menu">
 						<h2>Menu</h2>
 						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Familia Ingresada</a></li>
+							<li><a href="/family/index.html">Home</a></li>
+							<li><a href="/family/generic.html">Familia Ingresada</a></li>
 						</ul>
 					</nav>
 
@@ -51,36 +51,9 @@
 					<div id="main">
 						<div class="inner">
 							<header>
-								<h1>En este sitio WEB podras registrar toda tu familia!!!</h1>
-								<p>Por favor registra en el siguiente formulario los integrantes de tu familia:</p>
+								<h1>Felicitaciones tus datos fueron enviados!!!</h1>
+								<p> El integrante <b>{{nombre}}</b>  fue ingresado con exito</p>
 							</header>
-
-							<section>
-								<h2>DATOS DEL FAMILIAR A INGRESAR EN LA BASE DE DATOS</h2>
-								<form method="post" action="formulario/">{% csrf_token %}
-									<div class="fields">
-										<div class="field half">
-											<input type="text" name="nombre" placeholder="Nombre" />
-										</div>
-										<div class="field half">
-											<input type="text" name="profesion" placeholder="Profesion" />
-										</div>
-										<div class="field half">
-											<input type="number" name="edad" placeholder="Edad" />
-										</div>
-										<div class="field half">
-											<input type="email" name="email" placeholder="Email" />
-										</div>
-										<div class="field half">
-											<input type="text" name="descripcion" placeholder="Descripcion" />
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="ENVIAR" class="primary" /></li>
-									</ul>
-								</form>
-							</section>
-
 						</div>
 					</div>
 
