@@ -18,14 +18,31 @@
 									</span>
 									<a href="generic.html">
 										<h2>{{persons.nombre}}</h2>
+										
 										<div class="content">
-											<p><b>DATOS PERSONALES</b></p>
-											<p>
 											<b>EMAIL:  </b> {{persons.email}}</br>
 											<b>DESCRIPCION:  </b>{{persons.descripcion}}</br>
 											<b>EDAD:  </b>{{persons.edad}}</br>
 											<b>PROFESION:  </b>{{persons.profesion}}</br>
-											</p>
+											<b><p>PROFESION:  </b>{{persons.profesion}}</p>
+											<b>MASCOTA</b></br>
+											<b>NOMBRE:  </b>{{persons.nombre_mascota}}</br>
+										</div>
+									</a>
+								</article>
+								{% endfor %}
+								{% for mascotas in mascota1 %}
+								<article class="style2">
+									<span class="image">
+										<img src="{% static 'images/pic02.jpg' %}" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>{{mascotas.nombre_mascota}}</h2>
+										
+										<div class="content">
+											<b>NOMBRE:  </b>{{mascotas.nombre_mascota}}</br>
+											<b>EDAD:  </b>{{mascotas.edad_mascota}}</br>
+											<b>RAZA:  </b>{{mascotas.raza_mascota}}</br>
 										</div>
 									</a>
 								</article>

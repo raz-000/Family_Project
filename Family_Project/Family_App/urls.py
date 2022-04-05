@@ -8,5 +8,6 @@ urlpatterns = [
     path('formulario/', views.formulario, name='formulario'),
     path('home/', views.padre, name='home'),
     path('home.html', views.padre, name='home'),
+    path('generic1.html', views.generic, name='generic'),
 ]
 

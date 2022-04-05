@@ -16,17 +16,16 @@ def inicio_formulario(request):
 def family_ingress(request):
 
     person = Integrante_Familia.objects.all()
-    familiar = {
-
-    }
+    mascota1 = Mascota.objects.all()
+    alimento1 = Alimento.objects.all()
     print('--------------------------------------------------------------------')
-    print(person)
-    
-    return render(request, "index.html", {"person":person})
+    print(mascota1[0])
+    print(person[0])
+    return render(request, "index.html", {"person":person, 'mascota1':mascota1, 'alimento1':alimento1})
 
 def formulario(request):
 #    if request.method == 'POST':
-    print('----------------------------------------')
+    print('----------------------------------------++++++++++++++++++++++++++++++++++++++++')
     print(request.POST)
 
     nombre = request.POST['nombre']
@@ -34,11 +33,26 @@ def formulario(request):
     edad = request.POST['edad']
     email = request.POST['email']
     descripcion = request.POST['descripcion']
+    nombre_mascota=request.POST['nombre_mascota']
+    edad_mascota=request.POST['edad_mascota']
+    raza_mascota=request.POST['raza_mascota']
+    marca_alimento=request.POST['marca_alimento']
+    precio_dolares=request.POST['precio_dolares']
 
-    nuevo_inegrante = Integrante_Familia(nombre=nombre, profesion=profesion, edad=edad, email=email, descripcion=descripcion)
+
+    nuevo_inegrante = Integrante_Familia(nombre=nombre, profesion=profesion, edad=edad, email=email, descripcion=descripcion, nombre_mascota=nombre_mascota)
     nuevo_inegrante.save()
 
-    return render(request, "index3_formulario.html", {'nombre': nombre})
+    nueva_mascota = Mascota(nombre_mascota=nombre_mascota, edad_mascota=edad_mascota, raza_mascota=raza_mascota)
+    nueva_mascota.save()
+
+    nuevo_alimento = Alimento(marca_alimento=marca_alimento, precio_dolares=precio_dolares)
+    nuevo_alimento.save()
+
+    return render(request, "index3_formulario.html", {'nombre': nombre, 'nombre_mascota':nombre_mascota, 'edad_mascota':edad_mascota})
 
 def padre(request):
     return render(request, "home.html")
+
+def generic(request):
+    return render(request, "generic1.html")

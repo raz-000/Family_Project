@@ -1,0 +1,26 @@
+{% extends "home.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Generic Page</h1>
+							<span class="image main"><img src="{% static 'images/pic13.jpg' %}" alt="" /></span>
+							<p>A continuacion puedes encontrar la informacion completa:</p>
+
+							<p><b>DATOS PERSONALES</b></p>
+							<p>
+							<b>EMAIL:  </b> {{persons.email}}</br>
+							<b>DESCRIPCION:  </b>{{persons.descripcion}}</br>
+							<b>EDAD:  </b>{{persons.edad}}</br>
+							<b>PROFESION:  </b>{{persons.profesion}}</br>
+							<b>PROFESION:  </b>{{persons.profesion}}
+							<p><b>MASCOTA</b></p>
+							<b>NOMBRE:  </b>{{nombre_mascota.nombre_mascota}}
+							</p>
+							
+						</div>
+					</div>
+{% endblock %}
