@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+
+		{% load static %}
+
+		<title>FAMILY APP 👪</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+		<noscript><link rel="stylesheet" href="{% static 'assets/css/noscript.css' %}" /></noscript>
+	</head>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+								<a href="/family/home.html" class="logo">
+									<span class="symbol"><img src="{% static 'images/logo.svg' %}" alt="" /></span><span class="title">PYTHON CODER HOUSE</span>
+								</a>
+
+							<!-- Nav -->
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="/family/home.html">Home</a></li>
+							<li><a href="/family/index.html">Registrar un familiar</a></li>
+							<li><a href="/family/generic.html">Consultar familiar</a></li>
+						</ul>
+					</nav>
+				
+				{% block contenidoQueCambia %}
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<header>
+								<h1>BIENVENIDO!!</h1>
+								<p>Este es un sitio WEB nos permitira tener un registro de nuestra familia! Disfrutalo!   <b>:)</B></p>
+							</header>
+
+							<section>
+								<h2>Que operacion quieres realizar?: </h2>
+                                <div class="row">
+                                    <div class="col-6 col-12-medium">
+                                        <ul class="actions">
+                                            <li><a href="/family/index.html" class="button primary">REGISTRAR UN FAMILIAR</a></li>
+                                            <li><a href="/family/generic.html" class="button">CONSULTAR FAMILIARES POR FAMILIA</a></li>
+                                        </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+							</section>
+
+						</div>
+					</div>
+				{% endblock %}
+
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<section>
+								<h2>Follow</h2>
+								<ul class="icons">
+									<li><a href="https://twitter.com/search/%7BsearchTerms%7D?source=desktop-search" class="icon brands style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="https://es-la.facebook.com/" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="https://www.instagram.com/" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="https://dribbble.com/" class="icon brands style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="https://github.com/" class="icon brands style2 fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+							<ul class="copyright">
+								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="https://www.coderhouse.com.co/">CODER HOUSE</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>
