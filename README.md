@@ -1,4 +1,4 @@
-# Family_Project
+# FAMILY PROJECT
 
 This is a simple web-base application for managing a small database. With this app, users can add, delete, and modify entries in the database using a frontend. 
 
